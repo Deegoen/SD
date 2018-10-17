@@ -6,7 +6,7 @@ namespace Softwaredesign
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hallo" + " " + args[0]);
         }
     }
 }
