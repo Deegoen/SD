@@ -687,11 +687,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Softwaredesign.csproj",
-      "projectName": "Softwaredesign",
-      "projectPath": "/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Softwaredesign.csproj",
+      "projectUniqueName": "/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Testcode/Testcode.csproj",
+      "projectName": "Testcode",
+      "projectPath": "/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Testcode/Testcode.csproj",
       "packagesPath": "/Users/larsdegen/.nuget/packages/",
-      "outputPath": "/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/obj/",
+      "outputPath": "/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Testcode/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

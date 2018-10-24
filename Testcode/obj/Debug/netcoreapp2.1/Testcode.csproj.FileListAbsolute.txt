@@ -1,0 +1,11 @@
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Testcode/bin/Debug/netcoreapp2.1/Testcode.deps.json
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Testcode/bin/Debug/netcoreapp2.1/Testcode.runtimeconfig.json
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Testcode/bin/Debug/netcoreapp2.1/Testcode.runtimeconfig.dev.json
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Testcode/bin/Debug/netcoreapp2.1/Testcode.dll
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Testcode/bin/Debug/netcoreapp2.1/Testcode.pdb
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Testcode/obj/Debug/netcoreapp2.1/Testcode.csprojAssemblyReference.cache
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Testcode/obj/Debug/netcoreapp2.1/Testcode.csproj.CoreCompileInputs.cache
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Testcode/obj/Debug/netcoreapp2.1/Testcode.AssemblyInfoInputs.cache
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Testcode/obj/Debug/netcoreapp2.1/Testcode.AssemblyInfo.cs
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Testcode/obj/Debug/netcoreapp2.1/Testcode.dll
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Testcode/obj/Debug/netcoreapp2.1/Testcode.pdb
