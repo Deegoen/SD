@@ -31,7 +31,7 @@ namespace Testcode
             Console.WriteLine(salute.GetTypeCode());
             
         }
-                static void arrays()
+        static void arrays()
         {
             int[] ia= {1,0,2,9,3,8,4,7,5,6};
             int ergebnis = ia[0] * ia[2] + ia[4];
