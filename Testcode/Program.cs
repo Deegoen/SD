@@ -29,27 +29,27 @@ namespace Testcode
             Console.WriteLine(pi.GetTypeCode());
             Console.WriteLine(salute);
             Console.WriteLine(salute.GetTypeCode());
-            
+
         }
         static void arrays()
         {
-            int[] ia= {1,0,2,9,3,8,4,7,5,6};
+            int[] ia = { 1, 0, 2, 9, 3, 8, 4, 7, 5, 6 };
             int ergebnis = ia[0] * ia[2] + ia[4];
             // 1 * 2 + 3 = 5
             Console.WriteLine(ergebnis);
 
-            double[] ib ={3.14159265359,2.718, 2.97 * Math.Pow(10,-19),5};                                        
+            double[] ib = { 3.14159265359, 2.718, 2.97 * Math.Pow(10, -19), 5 };
             Console.WriteLine(ib[2]);
             Console.WriteLine(ib.Length);
         }
 
         static void strings()
         {
-            string meinString = "Dies ist ein String";
+            //string meinString = "Dies ist ein String";
 
             string a = "Dies ist ";
             string b = "ein String";
-            string c = a+b;
+            string c = a + b;
 
             //Console.WriteLine(meinString);
             //Console.WriteLine(c);
@@ -70,10 +70,12 @@ namespace Testcode
             int a = int.Parse(Console.ReadLine());
             int b = int.Parse(Console.ReadLine());
 
-            if(a >=3 && b==6)
+            if (a >= 3 && b == 6)
             {
                 Console.WriteLine("Du hast gewonnen!");
-            } else{
+            }
+            else
+            {
                 Console.WriteLine("Leider verloren");
             }
         }
@@ -126,27 +128,31 @@ namespace Testcode
         {
             string s = Console.ReadLine();
 
-            if(s == "Hi")
+            if (s == "Hi")
             {
                 Console.WriteLine("Du hast Hi eingegeben.");
-               
-            } else if(s == "Hey")
+
+            }
+            else if (s == "Hey")
             {
                 Console.WriteLine("Hey war deine Wahl");
-            } else if(s == "Hallo")
+            }
+            else if (s == "Hallo")
             {
                 Console.WriteLine("Du hast Hallo eingetippt");
-            } else
-            {
-                Console.WriteLine("Das Wort " +s+ " kenne ich leider nicht.");
             }
-            
-            
+            else
+            {
+                Console.WriteLine("Das Wort " + s + " kenne ich leider nicht.");
+            }
+
+
         }
         static void schleifen1()
         {
             int i = 0;
-            while(i<10){
+            while (i < 10)
+            {
                 i++;
                 Console.WriteLine(i);
             }
@@ -172,16 +178,16 @@ namespace Testcode
             } */
 
             int i = 0;
-            while(i<someStrings.Length)
+            while (i < someStrings.Length)
             {
                 Console.WriteLine(someStrings[i]);
                 i++;
-                
+
             }
         }
         static void schleifen3()
         {
-            
+
             string[] someStrings =
             {
                 "Hier",
@@ -192,8 +198,8 @@ namespace Testcode
                 "von",
                 "Strings"
             };
-            
-            
+
+
             int i = 0;
             do
             {
@@ -202,13 +208,13 @@ namespace Testcode
             } while (i < someStrings.Length);
 
             int g = 0;
-            while(true)
+            while (true)
             {
                 Console.WriteLine(someStrings[g]);
-                if(g > someStrings.Length)
-                break;
+                if (g > someStrings.Length)
+                    break;
                 g++;
-                
+
             }
         }
     }
