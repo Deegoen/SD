@@ -7,9 +7,9 @@ namespace Testcode
         static void Main(string[] args)
         {
             //inferenz();
-            //arrays();
+            arrays();
             //strings();
-            verzweigungen(); //nochmal wiederholen
+            //verzweigungen(); //nochmal wiederholen
             //switchcase();
             //ifelse();
             //schleifen1();
@@ -38,8 +38,8 @@ namespace Testcode
             // 1 * 2 + 3 = 5
             Console.WriteLine(ergebnis);
 
-            double[] ib ={3.14159265359,2.718, 2.97 * Math.Pow(10,-19),5};
-                                             // (2.97 * 10^-19)^ operator funktioniert nicht, deshalb math.pow 
+            double[] ib ={3.14159265359,2.718, 2.97 * Math.Pow(10,-19),5};                                        
+            Console.WriteLine(ib[2]);
             Console.WriteLine(ib.Length);
         }
 
