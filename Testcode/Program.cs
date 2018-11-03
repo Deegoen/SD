@@ -7,8 +7,8 @@ namespace Testcode
         static void Main(string[] args)
         {
             //inferenz();
-            arrays();
-            //strings();
+            //arrays();
+            strings();
             //verzweigungen(); //nochmal wiederholen
             //switchcase();
             //ifelse();
@@ -17,6 +17,7 @@ namespace Testcode
             //schleifen3();
 
         }
+        
         static void inferenz()
         {
             var i = 42;
