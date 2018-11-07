@@ -1,0 +1,11 @@
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/L4/obj/Debug/netcoreapp2.1/L4.csprojAssemblyReference.cache
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/L4/obj/Debug/netcoreapp2.1/L4.csproj.CoreCompileInputs.cache
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/L4/obj/Debug/netcoreapp2.1/L4.AssemblyInfoInputs.cache
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/L4/obj/Debug/netcoreapp2.1/L4.AssemblyInfo.cs
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/L4/bin/Debug/netcoreapp2.1/L4.deps.json
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/L4/bin/Debug/netcoreapp2.1/L4.runtimeconfig.json
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/L4/bin/Debug/netcoreapp2.1/L4.runtimeconfig.dev.json
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/L4/bin/Debug/netcoreapp2.1/L4.dll
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/L4/bin/Debug/netcoreapp2.1/L4.pdb
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/L4/obj/Debug/netcoreapp2.1/L4.dll
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/L4/obj/Debug/netcoreapp2.1/L4.pdb
