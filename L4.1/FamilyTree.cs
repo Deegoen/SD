@@ -22,7 +22,7 @@ namespace Debugging
             int age = DateTime.Now.Year - person.DateOfBirth.Year;
             Person ret = null;
 
-            if (age > 50){
+            if (age > 100){
                 return person;
             }
             /*
