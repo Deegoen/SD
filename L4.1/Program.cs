@@ -17,6 +17,7 @@ namespace Debugging
             Person root = Familytree.BuildTree();
 
             Person found = Familytree.Find(root);
+            //Person age = DateTime.Now.Year - Find.DateOfBirth.Year;
             WriteLine(root);
             WriteLine(found.FirstName + " " + found.LastName + " " + found.DateOfBirth);
             
