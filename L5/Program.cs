@@ -16,6 +16,7 @@ namespace L5
         }
         private static string ReverseString(string toReverseString)
         {
+            // Die Maus frisst den Käse --> esäK ned tssirf suaM eiD
             string reversedString = "";
 
             for (int i = toReverseString.Length - 1; i >= 0; i--)
@@ -28,6 +29,7 @@ namespace L5
 
         private static string ReverseWords(string toReverseString)
         {
+            // Die Maus frisst den Käse --> Käse den frisst Maus Die
             string test = "";
 
             return test;
@@ -35,6 +37,7 @@ namespace L5
 
         private static string ReverseEveryWord(string toReverseString)
         {
+            // Die Maus frisst den Käse --> eiD suaM tssirf esäK
             string test = "";
 
             return test;
