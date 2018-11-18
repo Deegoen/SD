@@ -11,8 +11,8 @@ namespace L5
 
             Console.WriteLine("Original String:" + " " + toReverseString);
             Console.WriteLine("Reversed String:" + " " + ReverseString(toReverseString));
-            //Console.WriteLine("Reversed Words:" + " " + ReverseWords(toReverseString));
-            //Console.WriteLine("Reversed Every Word:" + " " + ReverseEveryWord(toReverseString));
+            Console.WriteLine("Reversed Words:" + " " + ReverseWords(toReverseString));
+            Console.WriteLine("Reversed Every Word:" + " " + ReverseEveryWord(toReverseString));
         }
         private static string ReverseString(string toReverseString)
         {
@@ -27,20 +27,30 @@ namespace L5
             return reversedString;
         }
 
-        private static string ReverseWords(string toReverseString)
+        static string ReverseWords(string toReverseString)
         {
             // Die Maus frisst den Käse --> Käse den frisst Maus Die
-            string test = "";
+            string[] words = toReverseString.Split(' ');
+            Array.Reverse(words);
+            toReverseString = String.Join(" ", words);
+        
 
-            return test;
+            return toReverseString;
         }
 
-        private static string ReverseEveryWord(string toReverseString)
+        static string ReverseEveryWord(string toReverseString)
         {
-            // Die Maus frisst den Käse --> eiD suaM tssirf esäK
-            string test = "";
-
-            return test;
+            string reversed = "";
+            string[] word = toReverseString.Split(' ');
+            for (int i = 0; i < word.Length; i++)
+            {
+                string tempString = word[i];
+                char[] tempArray = tempString.ToCharArray();
+                Array.Reverse(tempArray);
+                toReverseString = String.Join("", tempArray);
+                reversed += toReverseString + " ";
+            }
+            return reversed;
         }
     }
 }
