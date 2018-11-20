@@ -14,7 +14,7 @@ namespace L5
             Console.WriteLine("Reversed Words:" + " " + ReverseWords(toReverseString));
             Console.WriteLine("Reversed Every Word:" + " " + ReverseEveryWord(toReverseString));
         }
-        private static string ReverseString(string toReverseString)
+        static string ReverseString(string toReverseString)
         {
             // Die Maus frisst den Käse --> esäK ned tssirf suaM eiD
             string reversedString = "";
