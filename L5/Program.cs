@@ -40,6 +40,7 @@ namespace L5
 
         static string ReverseEveryWord(string toReverseString)
         {
+            //Die Maus frisst den Käse --> eiD suaM tssirf ned esäK
             string reversed = "";
             string[] word = toReverseString.Split(' ');
             for (int i = 0; i < word.Length; i++)
