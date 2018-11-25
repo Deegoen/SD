@@ -11,7 +11,7 @@ namespace L6
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Willkomen zum Quiz! Wie ist dein Spielername?");
+            Console.WriteLine("Herzlich Willkommen! Mit welchem Namen möchten Sie spielen?");
             player.playerName = Console.ReadLine();
             player.score = 0;
             game();
