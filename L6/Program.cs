@@ -12,7 +12,6 @@ namespace L6
         static void Main(string[] args)
         {
             Console.WriteLine("Herzlich Willkommen! Mit welchem Namen möchten Sie spielen?");
-            player.playerName = Console.ReadLine();
             player.score = 0;
             game();
         }
@@ -21,7 +20,6 @@ namespace L6
         {
             Quizelement quiz = CreationOfQuestionAndAnswers();
             Console.WriteLine("Was willst du tun?");
-            Console.WriteLine(player.playerName + "'s Score is: " + player.score);
             Console.WriteLine("1. Fragen beantworten   2. Fragen erstellen   3. Beenden");
             string mode = Console.ReadLine();
 
@@ -39,7 +37,7 @@ namespace L6
                     game();
                     break;
                 default:
-                    Console.WriteLine("Du hast  " + player.score + " Punkte erreicht. Super Wahnsinn");
+                    Console.WriteLine("Du hast  " + player.score + " Punkt(e) erreicht. Super Wahnsinn");
                     break;
             }
 
@@ -67,9 +65,28 @@ namespace L6
             quiz2.answers[4] = new Answer { text = "Mainz 05", truth = false };
             quiz2.answers[5] = new Answer { text = "RB Leipzig", truth = false };
 
+            Quizelement quiz3 = new Quizelement();
+            quiz3.question = "Was ist die Hauptstadt von Frankreich";
+            quiz3.answers = new Answer[4];
+            quiz3.answers[0] = new Answer { text = "Paris", truth = true };
+            quiz3.answers[1] = new Answer { text = "Strasbourg", truth = false };
+            quiz3.answers[2] = new Answer { text = "Reims", truth = false };
+            quiz3.answers[3] = new Answer { text = "Lille", truth = false };
+
+            Quizelement quiz4 = new Quizelement();
+            quiz4.question = "Welche Jahreszeit kommt nach dem Herbst?";
+            quiz4.answers = new Answer[3];
+            quiz4.answers[0] = new Answer { text = "Frühling", truth = false };
+            quiz4.answers[1] = new Answer { text = "Winter", truth = true };
+            quiz4.answers[2] = new Answer { text = "Sommmer", truth = false };
+
             listWithAllQuestionsAndAnswers.Add(quiz);
 
             listWithAllQuestionsAndAnswers.Add(quiz2);
+
+            listWithAllQuestionsAndAnswers.Add(quiz3);
+
+            listWithAllQuestionsAndAnswers.Add(quiz4);
 
             Quizelement questionToDisplay = GetRandomQuestion(listWithAllQuestionsAndAnswers);
 
