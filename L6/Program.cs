@@ -11,7 +11,7 @@ namespace L6
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Herzlich Willkommen! Mit welchem Namen möchten Sie spielen?");
+            Console.WriteLine("Herzlich Willkommen! Viel Spaß beim Spielen");
             player.score = 0;
             game();
         }
