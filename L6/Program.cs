@@ -105,7 +105,7 @@ namespace L6
         {
 
             Random rnd = new Random();
-            int randomNumber = rnd.Next(_listWithAllQuestionsAndAnswers.Count);
+            int randomNumber = rnd.Next(_listWithAllQuestionsAndAnswers.Count); //rdn.Next erzeugt random Integer
             Quizelement randomQuestion = _listWithAllQuestionsAndAnswers[randomNumber];
 
             return randomQuestion;
