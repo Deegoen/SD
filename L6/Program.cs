@@ -11,7 +11,7 @@ namespace L6
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Herzlich Willkommen! Viel Spaß beim Spielen");
+            Console.WriteLine("Herzlich Willkommen! Viel Spaß beim Spielen!");
             player.score = 0;
             game();
         }
@@ -37,7 +37,14 @@ namespace L6
                     game();
                     break;
                 default:
-                    Console.WriteLine("Du hast  " + player.score + " Punkt(e) erreicht. Super Wahnsinn");
+                    if (player.score > 0)
+                    {
+                        Console.WriteLine("Du hast  " + player.score + " Punkt(e) erreicht. Super Wahnsinn");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Du hast leider nur  " + player.score + " Punkt(e) erreicht. Versuch es erneut!");
+                    }
                     break;
             }
 
