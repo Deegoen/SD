@@ -39,7 +39,7 @@ namespace L6
                 default:
                     if (player.score > 0)
                     {
-                        Console.WriteLine("Du hast  " + player.score + " Punkt(e) erreicht. Super Wahnsinn");
+                        Console.WriteLine("Du hast  " + player.score + " Punkt(e) erreicht. Glückwunsch!");
                     }
                     else
                     {
