@@ -56,7 +56,7 @@ namespace L7
                 new Answer("Platz 1 und 2 teilen sich die Meisterschaft.", false),
                 new Answer("Die Bundesliga besteht aus 20 Teams.", false)
             }));
-            listOfQuestions.Add(new QuizBinary("Borussia Dortmund ist aktuell Tabellenführer", false));
+            listOfQuestions.Add(new QuizBinary("Borussia Dortmund ist aktuell Tabellenführer", true));
             listOfQuestions.Add(new QuizGuess("Welches Jahr haben wir aktuell?", 2018));
             listOfQuestions.Add(new QuizFree("Wie heißt unsere Bundeskanzlrerin?", "Angela Merkel"));
 
