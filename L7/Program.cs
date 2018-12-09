@@ -19,10 +19,10 @@ namespace L7
                 switch (userInput)
                 {
                     case 1:
-                        StartQuiz();
+                        AskQuestion();
                         break;
                     case 2:
-                        AddQuestion();
+                        AddQuizelement();
                         break;
                     case 3:
                         if (score > 0)
@@ -42,7 +42,7 @@ namespace L7
             } while (userInput != 3);
         }
 
-        static public void StartQuiz()
+        static public void AskQuestion()
         {
             listOfQuestions.Add(new QuizSingle("Wer ist amtierender Torschützenkönig der Bundesliga?", new Answer[] {
                 new Answer("Mario Götze", false),
@@ -83,7 +83,7 @@ namespace L7
             return rInt;
         }
 
-        static public void AddQuestion()
+        static public void AddQuizelement()
         {
             Console.WriteLine("Was für einen Fragetyp wollen Sie hinzufügen? \n 1. QuizSingle \n 2. QuizMultiple \n 3. QuizBinary \n 4. QuizGuess \n 5. QuizFree");
             string questionType = Console.ReadLine();
@@ -92,25 +92,25 @@ namespace L7
             switch (questionType)
             {
                 case "1":
-                    listOfQuestions.Add(newQuizSingle(question));
+                    listOfQuestions.Add(NewQuizSingle(question));
                     break;
                 case "2":
-                    listOfQuestions.Add(newQuizMultiple(question));
+                    listOfQuestions.Add(NewQuizMultiple(question));
                     break;
                 case "3":
-                    listOfQuestions.Add(newQuizBinary(question));
+                    listOfQuestions.Add(NewQuizBinary(question));
                     break;
                 case "4":
-                    listOfQuestions.Add(newQuizFree(question));
+                    listOfQuestions.Add(NewQuizFree(question));
                     break;
                 case "5":
-                    listOfQuestions.Add(newQuizFree(question));
+                    listOfQuestions.Add(NewQuizFree(question));
                     break;
             }
             Console.WriteLine("Ihre Frage wurde erfolgreich hinzugefügt");
         }
 
-        public static Quizelement newQuizSingle(string question)
+        public static Quizelement NewQuizSingle(string question)
         {
             Console.WriteLine("Wie viele mögliche Antworten soll Ihre Fragen haben?");
             int numberOfAnswers = Int32.Parse(Console.ReadLine());
@@ -125,7 +125,7 @@ namespace L7
             return new QuizSingle(question, arrayOfAnswers);
         }
 
-        public static Quizelement newQuizMultiple(string question)
+        public static Quizelement NewQuizMultiple(string question)
         {
             Console.WriteLine("Wie viele mögliche Antworten soll Ihre Fragen haben?");
             int numberOfAnswers = Int32.Parse(Console.ReadLine());
@@ -141,20 +141,20 @@ namespace L7
             return new QuizSingle(question, arrayOfAnswers);
         }
 
-        public static Quizelement newQuizBinary(string question)
+        public static Quizelement NewQuizBinary(string question)
         {
             Console.WriteLine("Ist diese Antwort korrekt? (y/n)");
             bool theAnswer = Console.ReadLine() == "y";
             return new QuizBinary(question, theAnswer);
         }
 
-        public static Quizelement newQuizGuess(string question)
+        public static Quizelement NewQuizGuess(string question)
         {
             Console.WriteLine("Was ist die richtige Antwort?");
             return new QuizGuess(question, Int32.Parse(Console.ReadLine()));
         }
 
-        public static Quizelement newQuizFree(string question)
+        public static Quizelement NewQuizFree(string question)
         {
             Console.WriteLine("Was ist die richtige Antwort?");
             return new QuizFree(question, Console.ReadLine());
