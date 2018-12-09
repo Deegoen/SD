@@ -1,6 +1,6 @@
 using System;
 
-namespace L6
+namespace L7
 {
 
     public class Player
