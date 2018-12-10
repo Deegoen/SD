@@ -42,7 +42,7 @@ namespace L7
             } while (userInput != 3);
         }
 
-        static public void AskQuestion()
+        static public void AskQuestion() //public static void AddQuizelement() - auf die Reihenfolge achten
         {
             listOfQuestions.Add(new QuizSingle("Wer ist amtierender Torschützenkönig der Bundesliga?", new Answer[] {
                 new Answer("Mario Götze", false),
@@ -50,7 +50,7 @@ namespace L7
                 new Answer("Mario Gomez", false),
                 new Answer("Bastian Schweinsteiger", false)
             }));
-            listOfQuestions.Add(new QuizMultiple("Welche Aussage trifft auf die Budnesliga zu?", new Answer[] {
+            listOfQuestions.Add(new QuizMultiple("Welche Aussage trifft auf die Budnesliga zu?", new Answer[] { //Schreibfehler
                 new Answer("Es steigen sicher zwei Teams ab.", true),
                 new Answer("Es gibt 18 Teams.", true),
                 new Answer("Platz 1 und 2 teilen sich die Meisterschaft.", false),
@@ -58,7 +58,7 @@ namespace L7
             }));
             listOfQuestions.Add(new QuizBinary("Borussia Dortmund ist aktuell Tabellenführer", true));
             listOfQuestions.Add(new QuizGuess("Welches Jahr haben wir aktuell?", 2018));
-            listOfQuestions.Add(new QuizFree("Wie heißt unsere Bundeskanzlrerin?", "Angela Merkel"));
+            listOfQuestions.Add(new QuizFree("Wie heißt unsere Bundeskanzlrerin?", "Angela Merkel")); //Schreibfehler
 
             int randomQuizElement = random();
             listOfQuestions[randomQuizElement].show();
@@ -76,14 +76,14 @@ namespace L7
             }
         }
 
-        public static int random()
+        public static int random()//Methodennamen immer erster Buchstabe groß
         {
             Random rnd = new Random();
             int rInt = rnd.Next(listOfQuestions.Count);
             return rInt;
         }
 
-        static public void AddQuizelement()
+        static public void AddQuizelement() //public static void AddQuizelement() - auf die Reihenfolge achten
         {
             Console.WriteLine("Was für einen Fragetyp wollen Sie hinzufügen? \n 1. QuizSingle \n 2. QuizMultiple \n 3. QuizBinary \n 4. QuizGuess \n 5. QuizFree");
             string questionType = Console.ReadLine();
@@ -104,7 +104,7 @@ namespace L7
                     listOfQuestions.Add(NewQuizFree(question));
                     break;
                 case "5":
-                    listOfQuestions.Add(NewQuizFree(question));
+                    listOfQuestions.Add(NewQuizFree(question)); //müsste NewQuizGuess heißen
                     break;
             }
             Console.WriteLine("Ihre Frage wurde erfolgreich hinzugefügt");
