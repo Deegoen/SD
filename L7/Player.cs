@@ -7,7 +7,7 @@ namespace L7
     {
         public int score;
 
-        public void calculatescore(bool truth)
+        public void calculatescore(bool truth) //Methodennamen immer erster Buchstabe groß. jedes neue Wort mit einem Großbuchstaben beginnen
         {
             if (truth == true)
             {
