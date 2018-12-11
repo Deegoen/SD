@@ -7,7 +7,7 @@ namespace L7
     {
         public int score;
 
-        public void calculatescore(bool truth)
+        public void CalculateScore(bool truth)
         {
             if (truth == true)
             {
