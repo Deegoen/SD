@@ -1,26 +1,33 @@
 using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.IO;
+
+using System.Globalization;
+using Newtonsoft.Json.Converters;
 
 namespace L7
 {
     class QuizBinary : Quizelement
     {
-        public bool isTrue;
+        [JsonProperty("correct")]
+        bool correct{get; set;}
         public QuizBinary(String question, bool isTrue)
         {
             this.question = question;
-            this.isTrue = isTrue;
+            this.correct = isTrue;
             this.callToAction = "Tippen Sie ja oder nein?(j/n):";
-
+            this.type ="Binary";
         }
-        public override void show()
+        public override void Show()
         {
             Console.WriteLine(question);
-            Console.WriteLine(callToAction);
+            
         }
-        public override bool isAnswerCorrect(string choice)
+        public override bool IsAnswerChoiceCorrect(string choice)
         {
             bool theAnswer = (choice == "j");
-            if (theAnswer == isTrue)
+            if (theAnswer == correct)
             {
                 return true;
             }

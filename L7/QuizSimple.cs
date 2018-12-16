@@ -1,16 +1,28 @@
 using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.IO;
+
+using System.Globalization;
+using Newtonsoft.Json.Converters;
+
 
 namespace L7
 {
     class QuizSingle : Quizelement
     {
+        [JsonProperty("answers")]
+        public Answer[] answers { get; set; }
+
         public QuizSingle(String question, Answer[] answers)
         {
             this.question = question;
             this.answers = answers;
-            this.callToAction = "Tippen sie die richtige Antwort ein:";
+            this.callToAction = "Type in the number of the correct answer:";
+            this.type = "Single";
         }
-        public override void show()
+
+        public override void Show()
         {
             Console.WriteLine(question);
             for (int i = 0; i < this.answers.Length; i++)
@@ -20,17 +32,25 @@ namespace L7
             }
             Console.WriteLine(callToAction);
         }
-        public override bool isAnswerCorrect(string choice)
+        public override bool IsAnswerChoiceCorrect(string choice)
         {
-            int currentChoice = Int32.Parse(choice);
-            if (answers[currentChoice - 1].isCorrect == true)
+            try
             {
-                return true;
+                int currentChoice = Int32.Parse(choice);
+                if (answers[currentChoice - 1].isTrue == true)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch
             {
+                Console.WriteLine("Your Input was not valid");
                 return false;
             }
         }
     }
-}
+}    

@@ -1,16 +1,25 @@
 using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.IO;
+
+using System.Globalization;
+using Newtonsoft.Json.Converters;
 
 namespace L7
 {
     class QuizMultiple : Quizelement
     {
+        [JsonProperty("answers")]
+        public Answer[] answers { get; set; }
         public QuizMultiple(String question, Answer[] answers)
         {
             this.question = question;
             this.answers = answers;
-            this.callToAction = "Tippen Sie die richtigen Antworten ein, bitte trennen Sie die Antworten durch: \",\" ";
+            this.callToAction = "Type in the numbers of the correct answers seperated by \",\" ";
+            this.type = "Multiple";
         }
-        public override void show()
+        public override void Show()
         {
             Console.WriteLine(question);
             for (int i = 0; i < this.answers.Length; i++)
@@ -20,7 +29,7 @@ namespace L7
             }
             Console.WriteLine(callToAction);
         }
-        public override bool isAnswerCorrect(string choice)
+        public override bool IsAnswerChoiceCorrect(string choice)
         {
             string[] parts = Array.ConvertAll(choice.Split(','), p => p.Trim());
             int[] pickedAnswers = Array.ConvertAll(parts, int.Parse);
@@ -28,7 +37,7 @@ namespace L7
             int numberOfCorrectAnswers = 0;
             for (int i = 0; i < answers.Length; i++)
             {
-                if (answers[i].isCorrect == true)
+                if (answers[i].isTrue == true)
                 {
                     numberOfCorrectAnswers++;
                 }
@@ -36,7 +45,7 @@ namespace L7
 
             if (numberOfCorrectAnswers != pickedAnswers.Length)
             {
-                Console.WriteLine("Sie haben zu viele oder zu wenige Antworten gegeben!");
+                Console.WriteLine("You either picked too less or too much correct answers");
                 return false;
             }
             else
@@ -45,15 +54,15 @@ namespace L7
                 {
                     try
                     {
-                        if (answers[pickedAnswers[i] - 1].isCorrect == false)
+                        if (answers[pickedAnswers[i] - 1].isTrue == false)
                         {
-                            Console.WriteLine("Eine der Antworten war falsch!");
+                            Console.WriteLine("At least one of the answers was wrong");
                             return false;
                         }
                     }
                     catch
                     {
-                        Console.WriteLine("Möglicherweise existiert eine Ihrer Antworten nicht!");
+                        Console.WriteLine("At least one of the answers you selected does not exist");
                     }
                 }
             }

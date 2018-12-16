@@ -1,24 +1,32 @@
 using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.IO;
+
+using System.Globalization;
+using Newtonsoft.Json.Converters;
 
 namespace L7
 {
     class QuizFree : Quizelement
     {
-        public string answer;
+        [JsonProperty("correct")]
+        public string correct{get; set;}
         public QuizFree(String question, string answer)
         {
             this.question = question;
-            this.answer = answer;
+            this.correct = correct;
             this.callToAction = "Tippen Sie die korrekte Antwort ein:";
+            this.type = "Free";
         }
-        public override void show()
+        public override void Show()
         {
             Console.WriteLine(question);
             Console.WriteLine(callToAction);
         }
-        public override bool isAnswerCorrect(string choice)
+        public override bool IsAnswerChoiceCorrect(string choice)
         {
-            if (choice == answer)
+            if (choice == correct)
             {
                 return true;
             }

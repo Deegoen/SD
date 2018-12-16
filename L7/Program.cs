@@ -1,5 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
+using System.IO;
+
+using System.Globalization;
+using Newtonsoft.Json.Converters;
+using Newtonsoft.Json.Linq;
+
+
 
 namespace L7
 {
@@ -7,63 +15,92 @@ namespace L7
     class Program
     {
         static List<Quizelement> listOfQuestions = new List<Quizelement>();
-        static int score = 0;
-        static int answeredQuestions = 0;
+        static int score;
+        static int answeredQuestions;
+        static Random rnd = new Random();
         static void Main(string[] args)
         {
-            int userInput = 0;
+
+            DisplayMenu();
+
+        }
+        static void DisplayMenu()
+        {
             do
             {
                 Console.WriteLine("Score: " + score + "\nBeantwortete Fragen: " + answeredQuestions + "\nWas wollen sie tun?\n 1) Spielen \n 2) Frage hinzufügen \n 3) Beenden");
-                userInput = Int32.Parse(Console.ReadLine());
-                switch (userInput)
+                Console.WriteLine("Spielinfo: Tippe p um zu spielen, c um eine Frage erstellen, q um das Quiz zu beenden.");
+                string input = Console.ReadLine();
+                switch (input)
                 {
-                    case 1:
-                        AskQuestion();
+                    case "p":
+                        LoadJson();
+                        PlayQuiz();
                         break;
-                    case 2:
-                        AddQuizelement();
+                    case "c":
+                        AddQuizelementToJSON();
                         break;
-                    case 3:
-                        if (score > 0)
-                        {
-                            Console.WriteLine("Du hast  " + score + " Punkt(e) erreicht. Glückwunsch!");
-                        }
-                        else
-                        {
-                            Console.WriteLine("Du hast leider nur  " + score + " Punkt(e) erreicht. Versuch es erneut!");
-                        }
+                    case "q":
+                    default:
                         Environment.Exit(0);
                         break;
-                    default:
-                        Console.WriteLine("Bitte wählen Sie eine der Optionen(1/2/3) \n");
-                        break;
                 }
-            } while (userInput != 3);
+            } while (true);
         }
 
-        static public void AskQuestion()
+        public static JArray LoadJson()
         {
-            listOfQuestions.Add(new QuizSingle("Wer ist amtierender Torschützenkönig der Bundesliga?", new Answer[] {
-                new Answer("Mario Götze", false),
-                new Answer("Robert Lewandowski", true),
-                new Answer("Mario Gomez", false),
-                new Answer("Bastian Schweinsteiger", false)
-            }));
-            listOfQuestions.Add(new QuizMultiple("Welche Aussage trifft auf die Bundesliga zu?", new Answer[] {
-                new Answer("Es steigen sicher zwei Teams ab.", true),
-                new Answer("Es gibt 18 Teams.", true),
-                new Answer("Platz 1 und 2 teilen sich die Meisterschaft.", false),
-                new Answer("Die Bundesliga besteht aus 20 Teams.", false)
-            }));
-            listOfQuestions.Add(new QuizBinary("Borussia Dortmund ist aktuell Tabellenführer", true));
-            listOfQuestions.Add(new QuizGuess("Welches Jahr haben wir aktuell?", 2018));
-            listOfQuestions.Add(new QuizFree("Wie heißt unsere Bundeskanzlerin?", "Angela Merkel"));
+            using (StreamReader r = new StreamReader("listOfQuizelements.json"))
+            {
+                var json = r.ReadToEnd();
+                JArray obj = (JArray)JsonConvert.DeserializeObject(json);
+                CreateQuestions(obj);
+                return obj;
+            }
+        }
 
-            int RandomQuizElement = Random();
-            listOfQuestions[RandomQuizElement].show();
+        public static void CreateQuestions(JArray obj)
+        {
+            for (int i = 0; i < obj.Count; i++)
+            {
+                dynamic item = obj[i];
+                //dynamic item = obj[rnd.Next(0, obj.Count)];
+                String type = item.type;
+
+                switch (type)
+                {
+                    case "Single":
+                        QuizSingle quizSingle = item.ToObject<QuizSingle>();
+                        listOfQuestions.Add(quizSingle);
+                        break;
+                    case "Multiple":
+                        QuizMultiple quizMultiple = item.ToObject<QuizMultiple>();
+                        listOfQuestions.Add(quizMultiple);
+                        break;
+                    case "Guess":
+                        QuizGuess quizGuess = item.ToObject<QuizGuess>();
+                        listOfQuestions.Add(quizGuess);
+                        break;
+                    case "Binary":
+                        QuizBinary quizBinary = item.ToObject<QuizBinary>();
+                        listOfQuestions.Add(quizBinary);
+                        break;
+                    case "Free":
+                        QuizFree quizFree = item.ToObject<QuizFree>();
+                        listOfQuestions.Add(quizFree);
+                        break;
+                }
+            }
+        }
+
+
+
+        public static void PlayQuiz()
+        {
+            Quizelement currentQuiz = listOfQuestions[rnd.Next(listOfQuestions.Count)];
+            currentQuiz.Show();
             string choice = Console.ReadLine();
-            if (listOfQuestions[RandomQuizElement].isAnswerCorrect(choice))
+            if (currentQuiz.IsAnswerChoiceCorrect(choice))
             {
                 Console.WriteLine("Richtige Antwort! \n");
                 score++;
@@ -75,51 +112,50 @@ namespace L7
                 score--;
             }
         }
-
-        public static int Random()
+        public static JObject AddNewQuizelement()
         {
-            Random rnd = new Random();
-            int rInt = rnd.Next(listOfQuestions.Count);
-            return rInt;
-        }
-
-        public static void AddQuizelement()
-        {
-            Console.WriteLine("Was für einen Fragetyp wollen Sie hinzufügen? \n 1. QuizSingle \n 2. QuizMultiple \n 3. QuizBinary \n 4. QuizGuess \n 5. QuizFree");
+            Console.WriteLine("Was für einen Fragentyp willst du hinzufügen? \n 1. QuizSingle \n 2. QuizMultiple \n 3. QuizBinary \n 4. QuizGuess \n 5. QuizFree");
             string questionType = Console.ReadLine();
-            Console.WriteLine("Wie lautet die Frage?");
+            Console.WriteLine("Was ist die Frage ?");
             string question = Console.ReadLine();
             switch (questionType)
             {
                 case "1":
-                    listOfQuestions.Add(NewQuizSingle(question));
-                    break;
+                    var single = NewQuizSingle(question);
+                    JObject jSingle = JObject.FromObject(single);
+                    return jSingle;
                 case "2":
-                    listOfQuestions.Add(NewQuizMultiple(question));
-                    break;
+                    var multiple = NewQuizMultiple(question);
+                    JObject jMultiple = JObject.FromObject(multiple);
+                    return jMultiple;
                 case "3":
-                    listOfQuestions.Add(NewQuizBinary(question));
-                    break;
+                    var binary = NewQuizBinary(question);
+                    JObject jBinary = JObject.FromObject(binary);
+                    return jBinary;
                 case "4":
-                    listOfQuestions.Add(NewQuizFree(question));
-                    break;
+                    var guess = NewQuizGuess(question);
+                    JObject jGuess = JObject.FromObject(guess);
+                    return jGuess;
                 case "5":
-                    listOfQuestions.Add(NewQuizGuess(question));
-                    break;
+                    var free = NewQuizFree(question);
+                    JObject jFree = JObject.FromObject(free);
+                    return jFree;
             }
-            Console.WriteLine("Ihre Frage wurde erfolgreich hinzugefügt");
+            Console.WriteLine("Etwas ist schief gelaufen.");
+            return null;
         }
 
         public static Quizelement NewQuizSingle(string question)
         {
-            Console.WriteLine("Wie viele mögliche Antworten soll Ihre Fragen haben?");
+
+            Console.WriteLine("Wieviele Antworten hat die Frage?");
             int numberOfAnswers = Int32.Parse(Console.ReadLine());
             Answer[] arrayOfAnswers = new Answer[numberOfAnswers];
-            Console.WriteLine("Die korrekte Antwort lautet:");
+            Console.WriteLine("Tippe die richtige Anwort ein:");
             arrayOfAnswers[0] = new Answer(Console.ReadLine(), true);
             for (int i = 1; i < numberOfAnswers; i++)
             {
-                Console.WriteLine("Tippen Sie bitte falsche Antworten ein:");
+                Console.WriteLine("Tippe die falsche Antwort ein:");
                 arrayOfAnswers[i] = new Answer(Console.ReadLine(), false);
             }
             return new QuizSingle(question, arrayOfAnswers);
@@ -127,37 +163,60 @@ namespace L7
 
         public static Quizelement NewQuizMultiple(string question)
         {
-            Console.WriteLine("Wie viele mögliche Antworten soll Ihre Fragen haben?");
+            Console.WriteLine("Wieviele Antworten hat die Frage?");
             int numberOfAnswers = Int32.Parse(Console.ReadLine());
             Answer[] arrayOfAnswers = new Answer[numberOfAnswers];
-            for (int i = 1; i < numberOfAnswers; i++)
+            for (int i = 0; i < numberOfAnswers; i++)
             {
-                Console.WriteLine("Tippen Sie eine Antwort ein:");
+                Console.WriteLine("Tippe die richtige Antwort ein:");
                 string answer = Console.ReadLine();
-                Console.WriteLine("Ist diese Antwort korrekt? (y/n)");
+                Console.WriteLine("Ist die Antwort richtig ? (y/n)");
                 bool isTrue = Console.ReadLine() == "y";
                 arrayOfAnswers[i] = new Answer(answer, isTrue);
             }
-            return new QuizSingle(question, arrayOfAnswers);
+            return new QuizMultiple(question, arrayOfAnswers);
         }
 
         public static Quizelement NewQuizBinary(string question)
         {
-            Console.WriteLine("Ist diese Antwort korrekt? (y/n)");
-            bool theAnswer = Console.ReadLine() == "y";
+            Console.WriteLine("Ist die Antwort richtig? (y/n)");
+            bool theAnswer = false;
+            if (Console.ReadLine() == "y")
+            {
+                theAnswer = true;
+            }
             return new QuizBinary(question, theAnswer);
         }
 
         public static Quizelement NewQuizGuess(string question)
         {
-            Console.WriteLine("Was ist die richtige Antwort?");
+            Console.WriteLine("Was ist die richtige Nummer?");
             return new QuizGuess(question, Int32.Parse(Console.ReadLine()));
         }
 
-        public static Quizelement NewQuizFree(string question)
+        public static Quizelement NewQuizFree(string newQuestion)
         {
             Console.WriteLine("Was ist die richtige Antwort?");
-            return new QuizFree(question, Console.ReadLine());
+
+            string correctAnswer = Console.ReadLine();
+            return new QuizFree(newQuestion, correctAnswer);
+        }
+
+        public static void AddQuizelementToJSON()
+        {
+            JObject newElem = AddNewQuizelement();
+
+            using (FileStream fs = new FileStream("listOfQuizelements.json", FileMode.Append, FileAccess.Write))
+            {
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    JArray array = LoadJson();
+                    //JObject jsonObject = JObject.FromObject(obj);
+                    array.Add(newElem);
+                    string json = JsonConvert.SerializeObject(array, Formatting.Indented);
+                    File.WriteAllText("listOfQuizelements.json", json);
+                }
+            }
         }
     }
 }

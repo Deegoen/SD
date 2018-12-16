@@ -1,0 +1,71 @@
+[
+    {
+        "type": "Single",
+        "question": "Wie heißt unsere Bundeskanzlerin mit Vornamen?",
+        "answers": [
+            {
+                "text": "Maike",
+                "isTrue": false
+            },
+            {
+                "text": "Lisa",
+                "isTrue": false
+            },
+            {
+                "text": "Julia",
+                "isTrue": false
+            },
+            {
+                "text": "Angela",
+                "isTrue": true
+            },
+            {
+                "text": "Michaela",
+                "isTrue": false
+            }
+        ]
+    },
+    {
+        "type":"Multiple",
+        "question": "Was sind Säugetiere?",
+        "answers": [
+            {
+                "text": "Hund",
+                "isTrue": true
+            },
+            {
+                "text": "Hai",
+                "isTrue": false
+            },
+            {
+                "text": "Pferd",
+                "isTrue": true
+            },
+            {
+                "text": "Krokodil",
+                "isTrue": false
+            },
+            {
+                "text": "Elefant",
+                "isTrue": true
+            }
+            
+        ]
+    },
+    {
+        "type": "Binary",
+        "question": "Ist der Winter eine Jahreszeit?",
+        "correct": true 
+        
+    },
+    {
+        "type": "Guess",
+        "question": "Wie viele Bundesligatemas gibt es?",
+        "correct": 18
+    },
+    {
+        "type": "Free",
+        "question": "Wie heißt das höchste politische Amt in Deutschland?",
+        "correct": "Bundespräsident"
+    }
+]
