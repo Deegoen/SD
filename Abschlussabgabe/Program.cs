@@ -13,12 +13,12 @@ namespace Abschlussabgabe
 
             createTimetables(generator, settings);
 
-            Console.WriteLine(generator.allStudys[0].name + ":");
-            generator.allStudys[0].timetable.show();
+            Console.WriteLine(generator.allStudys[8].name + ":");
+            generator.allStudys[8].timetable.show();
 
             Console.WriteLine();
-            Console.WriteLine(generator.allDozenten[6].prename);
-            generator.allDozenten[6].timetable.show();
+            Console.WriteLine(generator.allDozenten[10].prename);
+            generator.allDozenten[10].timetable.show();
 
             Console.WriteLine();
             Console.WriteLine();

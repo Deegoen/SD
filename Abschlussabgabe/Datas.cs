@@ -56,7 +56,7 @@ namespace Abschlussabgabe
 
 
 
-
+            //************************************************************************************* */
             //MIB
             //************************************************************************************* */
 
@@ -123,7 +123,7 @@ namespace Abschlussabgabe
 
 
 
-
+            //************************************************************************************* */
             //OMB
             //************************************************************************************* */
             Studium OMB1 = new Studium("OMB1", 40);
@@ -180,7 +180,7 @@ namespace Abschlussabgabe
             generator.allCourses.Add(new Course("IntDesPra", "Interface Design Praktikum", Engenhart, OMB5, new List<Conditions> { Conditions.Computer }));
             generator.allCourses.Add(new Course("SteAnwPra", "Streaming Anwendungen Praktikum", Hottong, OMB5, new List<Conditions> { Conditions.Computer }));
             generator.allCourses.Add(new Course("StrAnw", "Streaming Anwendungen", Hottong, OMB5, new List<Conditions> { Conditions.Normal }));
-            generator.allCourses.Add(new Course("PrStud", "Projektstudium", Krach, MIB5, new List<Conditions> { Conditions.Normal })); //Dozent? Variabel
+            generator.allCourses.Add(new Course("PrStud", "Projektstudium", Krach, OMB5, new List<Conditions> { Conditions.Normal })); //Dozent? Variabel
 
             //OMB6
             generator.allCourses.Add(new Course("OnPrOnMark", "Online Produktmanagement und Online Marketing", Pietsch, OMB6, new List<Conditions> { Conditions.Normal }));
@@ -189,7 +189,7 @@ namespace Abschlussabgabe
 
 
 
-
+            //************************************************************************************* */
             //MKB
             //************************************************************************************* */
             Studium MKB1 = new Studium("MKB1", 35);
