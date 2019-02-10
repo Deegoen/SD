@@ -1,0 +1,11 @@
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Formattierung/bin/Debug/netcoreapp2.2/Formattierung.deps.json
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Formattierung/bin/Debug/netcoreapp2.2/Formattierung.runtimeconfig.json
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Formattierung/bin/Debug/netcoreapp2.2/Formattierung.runtimeconfig.dev.json
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Formattierung/bin/Debug/netcoreapp2.2/Formattierung.dll
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Formattierung/bin/Debug/netcoreapp2.2/Formattierung.pdb
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Formattierung/obj/Debug/netcoreapp2.2/Formattierung.csprojAssemblyReference.cache
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Formattierung/obj/Debug/netcoreapp2.2/Formattierung.csproj.CoreCompileInputs.cache
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Formattierung/obj/Debug/netcoreapp2.2/Formattierung.AssemblyInfoInputs.cache
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Formattierung/obj/Debug/netcoreapp2.2/Formattierung.AssemblyInfo.cs
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Formattierung/obj/Debug/netcoreapp2.2/Formattierung.dll
+/Users/larsdegen/Documents/Studium Medieninformatik/4. Semester/Softwaredesign/Softwaredesign/Formattierung/obj/Debug/netcoreapp2.2/Formattierung.pdb
