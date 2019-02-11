@@ -1,0 +1,173 @@
+[
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "I0.01",
+    "seats": 30,
+    "roomConditions": [
+      0
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "L1.01",
+    "seats": 30,
+    "roomConditions": [
+      1
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "L1.06a",
+    "seats": 40,
+    "roomConditions": [
+      0
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "I0.15",
+    "seats": 90,
+    "roomConditions": [
+      4
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "I0.16",
+    "seats": 90,
+    "roomConditions": [
+      4
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "L2.07a",
+    "seats": 40,
+    "roomConditions": [
+      1
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "I0.14",
+    "seats": 40,
+    "roomConditions": [
+      4
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "I1.20",
+    "seats": 40,
+    "roomConditions": [
+      0
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "I2.21",
+    "seats": 40,
+    "roomConditions": [
+      0
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "L2.07a",
+    "seats": 40,
+    "roomConditions": [
+      1
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "I0.17",
+    "seats": 90,
+    "roomConditions": [
+      4
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "I0.13",
+    "seats": 40,
+    "roomConditions": [
+      0
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "L1.05a",
+    "seats": 40,
+    "roomConditions": [
+      0
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "C0.02",
+    "seats": 50,
+    "roomConditions": [
+      4
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "L2.08",
+    "seats": 40,
+    "roomConditions": [
+      1
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "A3.11",
+    "seats": 40,
+    "roomConditions": [
+      0
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "N1.01",
+    "seats": 45,
+    "roomConditions": [
+      3
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "N1.06",
+    "seats": 50,
+    "roomConditions": [
+      3
+    ],
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Room, Abschlussabgabe",
+    "name": "A2.05",
+    "seats": 50,
+    "roomConditions": [
+      0
+    ],
+    "timetable": null
+  }
+]

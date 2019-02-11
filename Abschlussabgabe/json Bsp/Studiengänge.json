@@ -1,0 +1,98 @@
+[
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "MIB1",
+    "students": 35,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "MIB2",
+    "students": 30,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "MIB4",
+    "students": 12,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "MIB5",
+    "students": 12,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "MIB6",
+    "students": 10,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "OMB1",
+    "students": 40,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "OMB2",
+    "students": 30,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "OMB4",
+    "students": 35,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "OMB5",
+    "students": 33,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "OMB6",
+    "students": 33,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "MKB1",
+    "students": 35,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "MKB2",
+    "students": 33,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "MKB4",
+    "students": 32,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "MKB5",
+    "students": 32,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "MKB6",
+    "students": 20,
+    "timetable": null
+  },
+  {
+    "$type": "Abschlussabgabe.Studium, Abschlussabgabe",
+    "name": "MKB7",
+    "students": 18,
+    "timetable": null
+  }
+]

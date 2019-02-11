@@ -10,12 +10,12 @@ namespace Abschlussabgabe
             this.name = name;
             this.seats = seats;
             this.roomConditions = roomConditions;
-            this.roomTimetable = new Timetable();
+            this.timetable = new Timetable();
         }
         public string name;
         public int seats;
         public List<Conditions> roomConditions;
-        public Timetable roomTimetable;
+        public Timetable timetable;
 
         public bool compareWithCourse(Course course)
         {

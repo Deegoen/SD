@@ -1,0 +1,232 @@
+[
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Michael",
+    "prename": "Waldowski",
+    "timetable": null,
+    "blockedDays": [
+      4,
+      5
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Fridl",
+    "prename": "Dell'Oro",
+    "timetable": null,
+    "blockedDays": [
+      1,
+      2
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Dirk",
+    "prename": "Eisenbigler",
+    "timetable": null,
+    "blockedDays": [
+      3,
+      4
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Matthias",
+    "prename": "Reusch",
+    "timetable": null,
+    "blockedDays": [
+      2,
+      3
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Achim",
+    "prename": "Herbstreit",
+    "timetable": null,
+    "blockedDays": [
+      4,
+      5
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Thomas",
+    "prename": "Schneider",
+    "timetable": null,
+    "blockedDays": [
+      3,
+      5
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Nikolaus",
+    "prename": "Hottong",
+    "timetable": null,
+    "blockedDays": [
+      1,
+      2
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Ullrich",
+    "prename": "Dittler",
+    "timetable": null,
+    "blockedDays": [
+      1,
+      5
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Christian",
+    "prename": "Fries",
+    "timetable": null,
+    "blockedDays": [
+      2,
+      5
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Christoph",
+    "prename": "Eberle",
+    "timetable": null,
+    "blockedDays": [
+      1,
+      2
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Christoph",
+    "prename": "Müller",
+    "timetable": null,
+    "blockedDays": [
+      4,
+      5
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Timo",
+    "prename": "Dufner",
+    "timetable": null,
+    "blockedDays": [
+      4,
+      5
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Ruxandra",
+    "prename": "Lasowski",
+    "timetable": null,
+    "blockedDays": [
+      1,
+      5
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Thomas",
+    "prename": "Krach",
+    "timetable": null,
+    "blockedDays": [
+      2,
+      1
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Christoph",
+    "prename": "Zydorek",
+    "timetable": null,
+    "blockedDays": [
+      1,
+      3
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Jürgen",
+    "prename": "Anders",
+    "timetable": null,
+    "blockedDays": [
+      1,
+      5
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Un",
+    "prename": "Bekannt",
+    "timetable": null,
+    "blockedDays": [
+      1,
+      5
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Regina",
+    "prename": "Frieß",
+    "timetable": null,
+    "blockedDays": [
+      2,
+      5
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Regina",
+    "prename": "Frieß",
+    "timetable": null,
+    "blockedDays": [
+      2,
+      5
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Regina",
+    "prename": "Frieß",
+    "timetable": null,
+    "blockedDays": [
+      2,
+      5
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Wolfgang",
+    "prename": "Taube",
+    "timetable": null,
+    "blockedDays": [
+      3,
+      5
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Gotthard",
+    "prename": "Pietsch",
+    "timetable": null,
+    "blockedDays": [
+      1,
+      2
+    ]
+  },
+  {
+    "$type": "Abschlussabgabe.Dozent, Abschlussabgabe",
+    "name": "Marc",
+    "prename": "Engenhart",
+    "timetable": null,
+    "blockedDays": [
+      3,
+      4
+    ]
+  }
+]
