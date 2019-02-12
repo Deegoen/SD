@@ -12,7 +12,7 @@ namespace Abschlussabgabe
             this.day = day;
             this.block = block;
             this.dozent = dozent;
-            this.conditions = conditions; 
+            this.conditions = conditions;
         }
         public int day;
         public int block;

@@ -16,12 +16,12 @@ namespace Abschlussabgabe
 
         }
 
-        public Course(){}
+        public Course() { }
 
         public string name;
         public string description;
         public Dozent dozent;
         public Studium studium;
-        public List<Conditions> conditions; 
+        public List<Conditions> conditions;
     }
 }

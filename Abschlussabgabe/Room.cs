@@ -17,32 +17,33 @@ namespace Abschlussabgabe
         public List<Conditions> roomConditions;
         public Timetable timetable;
 
-        public bool compareWithCourse(Course course)
+        public bool CompareWithCourse(Course course)
         {
 
-            foreach(Conditions condition in roomConditions)
+            foreach (Conditions condition in roomConditions)
             {
-                if(course.conditions.Contains(condition))
+                if (course.conditions.Contains(condition))
                     continue;
                 else return false;
             }
 
-            foreach(Conditions condition in course.conditions)
+            foreach (Conditions condition in course.conditions)
             {
-                if(roomConditions.Contains(condition))
+                if (roomConditions.Contains(condition))
                     continue;
                 else return false;
             }
 
 
-            if(this.isRoomBigEnough(course) == false)
+            if (this.IsRoomBigEnough(course) == false)
                 return false;
 
             return true;
         }
 
-        public bool isRoomBigEnough(Course course){
-            if(seats >= course.studium.students)
+        public bool IsRoomBigEnough(Course course)
+        {
+            if (seats >= course.studium.students)
                 return true;
             else return false;
         }

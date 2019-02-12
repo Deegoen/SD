@@ -15,25 +15,26 @@ namespace Abschlussabgabe
 
         public string name;
         public string prename;
-        public Timetable timetable; 
+        public Timetable timetable;
         public int[] blockedDays;
 
-        public bool isBlocked(int numberOfDay)
+        public bool IsBlocked(int numberOfDay)
         {
-            foreach(int blockedDay in blockedDays)
+            foreach (int blockedDay in blockedDays)
             {
-                if(numberOfDay+1 == blockedDay){
+                if (numberOfDay + 1 == blockedDay)
+                {
                     return true;
                 }
             }
             return false;
         }
-        public bool hasTime(int numberOfDay, int block)
+        public bool HasTime(int numberOfDay, int block)
         {
-            if(timetable.week[numberOfDay].blocksPerDay[block].course == null)
+            if (timetable.week[numberOfDay].blocksPerDay[block].course == null)
                 return true;
             else return false;
         }
-        
+
     }
 }

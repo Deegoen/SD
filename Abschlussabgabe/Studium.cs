@@ -16,34 +16,38 @@ namespace Abschlussabgabe
 
         public int students;
 
-        public Timetable timetable; 
-        
-        public bool hasTime(int numberOfDay, int block)
+        public Timetable timetable;
+
+        public bool HasTime(int numberOfDay, int block)
         {
-            if(timetable.week[numberOfDay].blocksPerDay[block].course == null)
+            if (timetable.week[numberOfDay].blocksPerDay[block].course == null)
                 return true;
             else return false;
         }
 
-        public void possibleWpms(Generator generator)
+        public void PossibleWpms(Generator generator)
         {
-            List<WPM> possibleWpms = new List<WPM>();
-            if(generator.timetablesAreCalculated == true)
+            List<WPM> PossibleWpms = new List<WPM>();
+            if (generator.timetablesAreCalculated == true)
             {
-                foreach(WPM wpm in generator.allWpms)
+                foreach (WPM wpm in generator.allWpms)
                 {
-                    if(timetable.week[wpm.day-1].blocksPerDay[wpm.block-1].course == null)
-                        possibleWpms.Add(wpm);
+                    //hat Studiengang an diesem Zeitpunkt Zeit für WPM
+                    if (timetable.week[wpm.day - 1].blocksPerDay[wpm.block - 1].course == null)
+                        PossibleWpms.Add(wpm);
+                }
+                Console.WriteLine();
+                Console.WriteLine("Mögliche WPMs an deren Terminen du Zeit hast:");
+                Console.WriteLine();
+                foreach (WPM wpm in PossibleWpms)
+                {
+                    Console.WriteLine(wpm.description);
                 }
             }
             else Console.WriteLine("Stundenplan noch nicht berechnet");
-            
-            Console.WriteLine("Mögliche WPMs an deren Terminen du Zeit hast:");
-            Console.WriteLine();
-            foreach(WPM wpm in possibleWpms)
-            {
-                Console.Write(wpm.name);
-            }
-        } 
+
+
+
+        }
     }
 }

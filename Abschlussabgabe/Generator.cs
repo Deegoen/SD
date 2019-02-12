@@ -26,7 +26,9 @@ namespace Abschlussabgabe
 
         public bool timetablesAreCalculated;
 
-        public Studium getByName(string name)
+
+
+        public Studium GetByName(string name)
         {
             foreach (Studium studium in allStudys)
             {
@@ -36,7 +38,18 @@ namespace Abschlussabgabe
             return null;
         }
 
-        // public void createEmtyTimetable()
+        public Dozent GetByNameDozent(string prename)
+        {
+            foreach (Dozent dozent in allDozenten)
+            {
+                if (dozent.prename.Equals(prename))
+                    return dozent;
+            }
+            return null;
+        }
+
+
+        // public void createEmptyTimetable()
         // {
         //     foreach(Studium studium in allStudys)
         //     {
@@ -54,7 +67,7 @@ namespace Abschlussabgabe
         //     }
         // }
 
-        public void fillBlock(int block)
+        public void FillBlock(int block)
         {
             foreach (Room room in allRooms)
             {
@@ -64,22 +77,24 @@ namespace Abschlussabgabe
                     if (allCourses.Count == 0)
                         return;
 
-                    Course course = getPossibleCourse(room, day.numberOfDay-1, block);
+                    Course course = GetPossibleCourse(room, day.numberOfDay - 1, block);
 
                     if (course == null)
                         continue;
+                    // Course wird für alle Timetables gesetzt, wenn passend
+                    course.studium.timetable.week[day.numberOfDay - 1].blocksPerDay[block].course = course;
+                    room.timetable.week[day.numberOfDay - 1].blocksPerDay[block].course = course;
+                    course.dozent.timetable.week[day.numberOfDay - 1].blocksPerDay[block].course = course;
 
-                    course.studium.timetable.week[day.numberOfDay-1].blocksPerDay[block].course = course;
-                    room.timetable.week[day.numberOfDay-1].blocksPerDay[block].course = course;
-                    course.dozent.timetable.week[day.numberOfDay-1].blocksPerDay[block].course = course;
-
+                    // Gesetzter Kurs wird aus Liste allCourses entfernt
                     allCourses.Remove(course);
                 }
             }
         }
 
-        private Course getPossibleCourse(Room room, int numberOfDay, int block)
+        private Course GetPossibleCourse(Room room, int numberOfDay, int block)
         {
+            //temporäre Liste
             List<Course> tempAllCourses = new List<Course>();
             foreach (Course copyCourse in allCourses)
                 tempAllCourses.Add(copyCourse);
@@ -87,13 +102,13 @@ namespace Abschlussabgabe
             int i = 0;
             Course course = null;
             while (i != 1)
-            {
+            {   // ist in Liste Inhalt
                 if ((tempAllCourses == null) || (tempAllCourses.Count == 0))
                     return null;
 
                 course = tempAllCourses[0];
-
-                if (!course.dozent.isBlocked(numberOfDay) && course.dozent.hasTime(numberOfDay, block) && course.studium.hasTime(numberOfDay, block) && room.compareWithCourse(course))
+                //wird überprüft ob Bedingungen passen, Prof Zeit, Studiengang Zeit, Raum Eigenschaften, wenn alles passt wird Course gesetzt
+                if (!course.dozent.IsBlocked(numberOfDay) && course.dozent.HasTime(numberOfDay, block) && course.studium.HasTime(numberOfDay, block) && room.CompareWithCourse(course))
                 {
                     i = 1;
                 }

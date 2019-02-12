@@ -8,7 +8,7 @@ namespace Abschlussabgabe
         public Day(int numberOfDay)
         {
             this.numberOfDay = numberOfDay;
-            this.blocksPerDay = new Block[6]{new Block(),new Block(),new Block(),new Block(),new Block(),new Block(),};
+            this.blocksPerDay = new Block[6] { new Block(), new Block(), new Block(), new Block(), new Block(), new Block(), };
         }
         public Block[] blocksPerDay;
         public int numberOfDay;

@@ -11,43 +11,48 @@ namespace Abschlussabgabe
         static void Main(string[] args)
         {
             Generator generator = new Generator();
-            //jsonRead(generator);
+            //JsonRead(generator);
             Settings settings = new Settings(new int[6] { 2, 3, 4, 1, 5, 6 }, 5, 2, 3);
 
             /*foreach(Studium studium in generator.allStudys)
             {
                 Console.WriteLine(studium.name);
             }*/
-            
-            Datas.createDatas(generator);
 
-            //jsonWrite(generator);
+            Datas.CreateDatas(generator); //Fill empty lists of Generator 
 
-            createTimetables(generator, settings);
+            //JsonWrite(generator);
 
-            Console.WriteLine(generator.allStudys[0].name + ":");
-            generator.allStudys[0].timetable.show();
+            CreateTimetables(generator, settings);
 
-            //generator.allStudys[5].possibleWpms(generator);
+            Console.WriteLine("MIB1:");
+            generator.GetByName("MIB1").timetable.Show();
+
+            Console.WriteLine();
+
+            Console.WriteLine("Waldoswski:");
+            generator.GetByNameDozent("Waldowski").timetable.Show();
+
+            generator.allStudys[5].PossibleWpms(generator);
         }
 
-        private static void createTimetables(Generator generator, Settings settings)
+        private static void CreateTimetables(Generator generator, Settings settings)
         {
             foreach (int block in settings.orderBlocks)
             {
-                generator.fillBlock(block - 1);
+                generator.FillBlock(block - 1);
             }
             generator.timetablesAreCalculated = true;
         }
 
-        private static void jsonWrite(Generator generator)
+        private static void JsonWrite(Generator generator)
         {
             JsonSerializerSettings settings = new JsonSerializerSettings
             {
                 TypeNameHandling = TypeNameHandling.Objects,
                 Formatting = Formatting.Indented,
             };
-
+            //Convert object to string
             string JStudys = JsonConvert.SerializeObject(generator.allStudys, settings);
             string JRooms = JsonConvert.SerializeObject(generator.allRooms, settings);
             string JCourses = JsonConvert.SerializeObject(generator.allCourses, settings);
@@ -62,14 +67,14 @@ namespace Abschlussabgabe
 
         }
 
-        private static void jsonRead(Generator generator)
+        private static void JsonRead(Generator generator)
         {
             JsonSerializerSettings settings = new JsonSerializerSettings
             {
                 TypeNameHandling = TypeNameHandling.Objects,
-                Formatting = Formatting.Indented,
+                Formatting = Formatting.Indented, //Einrückung
             };
-
+            //fill the lists
             generator.allStudys = JsonConvert.DeserializeObject<List<Studium>>(File.ReadAllText("Studiengänge.json"), settings);
             generator.allRooms = JsonConvert.DeserializeObject<List<Room>>(File.ReadAllText("Räume.json"), settings);
             generator.allCourses = JsonConvert.DeserializeObject<List<Course>>(File.ReadAllText("Kurse.json"), settings);

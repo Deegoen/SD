@@ -10,7 +10,7 @@ namespace Abschlussabgabe
         }
         public Day[] week;
 
-        public void show()
+        public void Show()
         {
             for (int i = 0; i <= 5; i++)
             {
